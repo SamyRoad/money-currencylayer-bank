@@ -165,8 +165,6 @@ class Money
       # The actual thread has always old rates in memory store.
       # @return [Boolean] true if rates are stale
       def stale?
-        return false if ttl_in_seconds.zero?
-
         rates_timestamp != rates_mem_timestamp
       end
 
